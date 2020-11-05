@@ -104,6 +104,7 @@ func (c *criService) containerMounts(sandboxID string, config *runtime.Container
 			ContainerPath: devShm,
 			HostPath:      sandboxDevShm,
 			Readonly:      false,
+			SelinuxRelabel: true,
 		})
 	}
 	return mounts
